@@ -1,0 +1,142 @@
+:root {
+  --roxo-base: rgb(42, 0, 48);
+  --rosa-botton: rgba(181, 53, 246);
+  --borda-botton: rgba(0, 0, 0, 0);
+}
+
+body,
+header,
+main,
+div,
+section {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.fundo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.vídeo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.texto {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rem;
+}
+
+.texto > img {
+  width: 20rem;
+  height: 10rem;
+}
+
+header {
+  background-color: var(--roxo-base);
+  width: 100%;
+  height: 5rem;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0px 1%;
+}
+
+img {
+  width: 10%;
+  height: 100%;
+  align-items: center;
+  align-content: center;
+  margin-top: 20px;
+}
+
+.logo {
+  height: 3rem;
+  width: 12rem;
+  margin-top: -2rem;
+}
+
+.assinatura {
+  background-color: var(--rosa-botton);
+  height: 28px;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.entrar {
+  background: none;
+  border-color: var(--borda-botton);
+  font-size: 14px;
+  color: white;
+  margin-right: 8%;
+}
+
+.cadastro {
+  display: flex;
+  margin-right: 0;
+  height: 100%;
+  align-items: center;
+  margin-top: 14px;
+  color: white;
+}
+
+.assinatura-dois {
+  background-color: var(--rosa-botton);
+  height: 42px;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-left: 54.5rem;
+  align-items: center;
+}
+
+.final {
+  display: block;
+  color: white;
+  margin-top: 2rem;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0.7rem;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  margin-top: -0.5rem;
+}

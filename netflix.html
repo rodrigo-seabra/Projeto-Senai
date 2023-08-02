@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/netflix.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+    <title>Netflix</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="assets/fotos/Netflix_2015_logo.svg" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                  <div class="mobile-menu-icon">
+                    <button onclick="menuShow()" class="btn-mobile-menu">Início</button>
+                  </div>
+                    <li class="nav-item"><a href="#" class="nav-link início">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Séries</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Filmes</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Bombando</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Minha lista</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Navegar por idiomas</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                    <img src="assets/fotos/lupa-tela-desktop.png" alt="" height="32" width="32" class="icones-tela-desktop">
+                    <img src="assets/fotos/icons8-sino-24.png" alt="" height="32" width="32" class="icone-sino icones-tela-desktop">
+                    <img src="assets/fotos/icone netflix.jpg" alt="" height="32" width="32" class="icone-perfil-425px">
+                    <!-- Código botão do ícone -->
+                    <label class="popup">
+                        <input type="checkbox">
+                        <div class="burger" tabindex="0">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                        <nav class="popup-window">
+                          <legend>Professores</legend>
+                          <ul>
+                            <li>
+                              <button>
+                                <img src="assets/fotos/icone 2.png" alt="" width="32" height="32">
+                                <span>Julinho</span>
+                              </button>
+                            </li>
+                            <li>
+                              <button>
+                                <img src="assets/fotos/icone 3.png" alt="" width="32" height="32">
+                                <span>Zago</span>
+                              </button>
+                            </li>
+                            <hr>
+                            <li>
+                              <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                  <rect ry="2" rx="2" height="13" width="13" y="9" x="9"></rect>
+                                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span>Transferir perfil</span>
+                              </button>
+                            </li>
+                            <li>
+                              <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                  <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+                                </svg>
+                                <span>Gerenciar perfis</span>
+                              </button>
+                            </li>
+                            <li class="icones-tela-mobile">
+                              <button>
+                                <img src="assets/fotos/lupa-tela-mobile.png" alt="" height="14" width="14">
+                                <span>Pesquisar</span>
+                              </button>
+                            </li>
+                            <li class="icones-tela-mobile">
+                              <button>
+                                <img src="assets/fotos/icone sino menu mobile.png" alt="" height="14" width="14">
+                                <span>Notificações</span>
+                              </button>
+                            </li>
+                            <hr>
+                            <li class="exit-popup">
+                              <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                  <line y2="18" x2="6" y1="6" x1="18"></line>
+                                  <line y2="18" x2="18" y1="6" x1="6"></line>
+                                </svg>
+                                <span>Sair da Netflix</span>
+                              </button>
+                            </li>
+                          </ul>
+                        </nav>
+                    </label>
+                    <!-- Fim do código do botão do ícone -->
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Séries</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Filmes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Bombando</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Minha lista</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Navegar por idiomas</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="filmes">
+            <h2 class="text-filmes">Adicionados recentemente</h2>
+            <div class="carousel">
+                <div><img class="banner" src="assets/fotos/filme.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme2.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme3.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme4.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme5.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme6.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme7.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme8.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme9.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme10.jpg" alt=""></div>
+            </div>
+            <h2 class="text-filmes">Em alta</h2>
+            <div class="carousel">
+                <div><img class="banner" src="assets/fotos/filme11.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme12.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme13.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme14.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme15.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme16.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme17.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme18.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme19.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme19.jpg" alt=""></div>
+            </div>
+            <h2 class="text-filmes">Assista em uma noite</h2>
+            <div class="carousel">
+                <div><img class="banner" src="assets/fotos/filme20.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme21.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme22.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme23.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme24.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme25.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme26.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme27.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme28.jpg" alt=""></div>
+                <div><img class="banner" src="assets/fotos/filme29.jpg" alt=""></div>
+            </div>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/slick.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/netflix.js"></script>
+        <script src="assets/js/responsividade.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="assets/css/calculadora.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <section class="calculadora">
+      <div class="historico" id="historico"></div>
+      <div class="visor" id="resultado"></div>
+      <section class="botoes">
+        <div class="num-c-0">
+          <div class="c">
+            <button class="btn btn-c" id="C" onclick="limpar()">C</button>
+          </div>
+          <div class="btns">
+            <div class="num-7-4-1">
+              <button
+                class="btn"
+                id="7"
+                value="7"
+                onclick="PegarValorBotao(this)"
+              >
+                7
+              </button>
+              <button
+                class="btn"
+                id="4"
+                value="4"
+                onclick="PegarValorBotao(this)"
+              >
+                4
+              </button>
+              <button
+                class="btn"
+                id="1"
+                value="1"
+                onclick="PegarValorBotao(this)"
+              >
+                1
+              </button>
+            </div>
+            <div class="num-8-5-2">
+              <button
+                class="btn"
+                id="8"
+                value="8"
+                onclick="PegarValorBotao(this)"
+              >
+                8
+              </button>
+              <button
+                class="btn"
+                id="5"
+                value="5"
+                onclick="PegarValorBotao(this)"
+              >
+                5
+              </button>
+              <button
+                class="btn"
+                id="2"
+                value="2"
+                onclick="PegarValorBotao(this)"
+              >
+                2
+              </button>
+            </div>
+          </div>
+          <div class="num-0">
+            <button
+              class="btn btn-0"
+              id="0"
+              value="0"
+              onclick="PegarValorBotao(this)"
+            >
+              0
+            </button>
+          </div>
+        </div>
+        <div class="num-3-6-9">
+          <button class="btn" id="Divisao" onclick="PegarValorOperador('/')">
+            /
+          </button>
+          <button class="btn" id="9" value="9" onclick="PegarValorBotao(this)">
+            9
+          </button>
+          <button class="btn" id="6" value="6" onclick="PegarValorBotao(this)">
+            6
+          </button>
+          <button class="btn" id="3" value="3" onclick="PegarValorBotao(this)">
+            3
+          </button>
+          <button
+            class="btn"
+            id="btn-virgula"
+            value="."
+            onclick="PegarValorBotao(this)"
+          >
+            .
+          </button>
+        </div>
+        <div class="operecoes">
+          <button
+            class="btn"
+            id="Multiplicacao"
+            onclick="PegarValorOperador('x')"
+          >
+            X
+          </button>
+          <button class="btn" id="Subtracao" onclick="PegarValorOperador('-')">
+            -
+          </button>
+          <button class="btn" id="Adicao" onclick="PegarValorOperador('+')">
+            +
+          </button>
+          <button
+            class="btn"
+            id="Igual"
+            data-action="calculate"
+            onclick="CalcularResultado()"
+          >
+            =
+          </button>
+        </div>
+      </section>
+    </section>
+    <script src="assets/js/calculadora.js"></script>
+  </body>
+</html>

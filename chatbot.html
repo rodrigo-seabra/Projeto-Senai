@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script src="https://use.fontawesome.com/43a8349063.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/chat-bot.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiroBot</title>
+  </head>
+  <body>
+    <section class="bottop">
+      <header class="bottop-header">
+        <div class="header-title">
+          <img src="assets/photos/chatbot.png" alt="" />
+          <h2>MiroBot</h2>
+        </div>
+        <div class="close">
+          <button>fechar</button>
+        </div>
+      </header>
+      <section class="main-chat" id="main-chat">
+        <div class="msg msg-esquerda" id="msg-esquerda">
+          <div class="msg-img"></div>
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-nome">MiroBot</div>
+              <div class="msg-info-time">7:30</div>
+            </div>
+            <div class="msg-text">
+              Olá, bem vindo ao chat do Miro! Tire suas dúvidas aqui! Por favor
+              escreva textos pequenos focando em palavras chaves.
+            </div>
+          </div>
+        </div>
+        <div class="msg msg-direita" style="display: none" id="clone">
+          <div class="msg-img"></div>
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="mss-info-name">Você</div>
+              <div class="msg-info-time"></div>
+            </div>
+            <div class="msg-text"></div>
+          </div>
+        </div>
+      </section>
+      <div class="msg-inputarea">
+        <input
+          type="text"
+          id="pergunta"
+          class="msg-input"
+          placeholder=" Envie sua mensagem..."
+        />
+        <button type="submit" class="msg-send-btn">
+          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+        </button>
+      </div>
+    </section>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/chat-bot.js"></script>
+  </body>
+</html>
