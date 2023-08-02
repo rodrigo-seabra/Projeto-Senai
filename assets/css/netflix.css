@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background-color: #141414;
+}
+/*Estilizando o header*/
+header {
+  background-color: #141414;
+  box-shadow: 0px 3px 10px #141414;
+}
+/*Display flex na nav por inteira para ficar um do lado do outro e dando espaçamentos*/
+.nav-bar {
+  display: flex;
+  justify-content: left;
+  padding: 1.4rem 4.8rem;
+  gap: 1.5rem;
+}
+/*Alinhando a logo e dando um tamanho para a div tela de desktop*/
+.logo {
+  display: flex;
+  align-items: center;
+  width: 6%;
+}
+/*Fazendo com que o img da logo não ultrapasse os limites da div*/
+.logo img {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+/*Dando um tamanho e display flex para a lista da nav bar*/
+.nav-list {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+/*Dando display flex nos itens da nav bar para eles ficarem um do lado do outro e tirando o estilo de lista*/
+.nav-list ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+/*Desgrudando um item do outro da nav-list*/
+.nav-item {
+  margin: 0 15px;
+}
+/*Tirando o estilo pré-definido dos links A e dando um estilo próprio*/
+.nav-link {
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: #e5e5e5;
+  font-weight: 400;
+}
+/*Quando passar o mouse por cima de cada item da nav irá ter uma transição de cor*/
+.nav-item a:hover {
+  color: #b3b3b3;
+  transition: color 0.4s;
+}
+/*Somente o início terá bold pois ele ja está pré selecionado*/
+.início {
+  font-weight: bold;
+}
+/*Display none no ícone de fechar o menu mobile*/
+.mobile-menu-icon {
+  display: none;
+}
+/*Display none no menu mobile*/
+.mobile-menu {
+  display: none;
+}
+/*Dando um border radius em todos os icones*/
+.icone-perfil-425px {
+  border-radius: 2px;
+}
+/*Responsividade para telas 930px*/
+@media screen and (max-width: 930px) {
+  .nav-bar {
+    padding: 1.6rem 4.8rem;
+  }
+  .nav-item {
+    display: none;
+  }
+  .login-button {
+    display: none;
+  }
+  .mobile-menu-icon {
+    display: block;
+  }
+  .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .mobile-menu .nav-item {
+    display: block;
+    padding-top: 1.2rem;
+  }
+  .mobile-menu .login-button {
+    display: block;
+    padding: 1rem 2rem;
+  }
+  .mobile-menu .login-button button {
+    width: 100%;
+  }
+  .open {
+    display: block;
+  }
+  .logo {
+    width: 15%;
+  }
+  .nav-item a:hover {
+    color: #b3b3b3;
+    transition: color 0.4s;
+  }
+  .nav-link {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #e5e5e5;
+    font-weight: 400;
+  }
+}
+/*Tirando as notificações e a lupa da tela do second menu*/
+.icones-tela-mobile {
+  display: none;
+}
+/*Responsividade para mobile 425px*/
+@media screen and (max-width: 425px) {
+  .icones-tela-desktop {
+    display: none;
+  }
+  .icones-tela-mobile {
+    display: block;
+  }
+  .logo {
+    width: 30%;
+  }
+  .nav-bar {
+    padding: 1.4rem 3.5rem;
+  }
+  body .filmes {
+    padding-left: 3.5rem;
+  }
+  .filmes h2 {
+    font-size: 1.5rem;
+  }
+  .icone-perfil-425px {
+    height: 30px;
+    width: 30px;
+  }
+}
+/*Responsividade para mobile 375px*/
+@media screen and (max-width: 375px) {
+  .logo {
+    width: 30%;
+  }
+  .nav-bar {
+    padding: 1.4rem 3rem;
+  }
+  body .filmes {
+    padding-left: 3rem;
+  }
+}
+/*Estilizando a section filmes que está englobando todos os carousel*/
+.filmes {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  gap: 1rem 0;
+  margin-top: 2rem;
+  padding-left: 4.8rem;
+}
+/*Tamanho do carousel para aparecer os 4 banner*/
+.carousel {
+  width: 95%;
+}
+/*Estilizando o "Em alta" e etc*/
+.text-filmes {
+  font-size: 2rem;
+  color: #e5e5e5;
+  font-family: "netflix-rg";
+}
+
+/*Css do botão do ícone*/
+.popup {
+  --burger-line-width: 1.125em;
+  --burger-line-height: 0.125em;
+  --burger-offset: 0.625em;
+  --burger-bg: rgba(0, 0, 0, 0.7);
+  --burger-color: #333;
+  --burger-line-border-radius: 0.1875em;
+  --burger-diameter: 2.125em;
+  --burger-btn-border-radius: calc(var(--burger-diameter) / 2);
+  --burger-line-transition: 0.3s;
+  --burger-transition: all 0.1s ease-in-out;
+  --burger-hover-scale: 1.1;
+  --burger-active-scale: 0.95;
+  --burger-enable-outline-color: var(--burger-bg);
+  --burger-enable-outline-width: 0.125em;
+  --burger-enable-outline-offset: var(--burger-enable-outline-width);
+  /* nav */
+  --nav-padding-x: 0.25em;
+  --nav-padding-y: 0.625em;
+  --nav-border-radius: 0.375em;
+  --nav-border-width: 0.0625em;
+  --nav-shadow-color: rgba(0, 0, 0, 0.2);
+  --nav-shadow-width: 0 1px 5px;
+  --nav-bg: #141414;
+  --nav-font-family: Menlo, Roboto Mono, monospace;
+  --nav-default-scale: 0.8;
+  --nav-active-scale: 1;
+  --nav-position-left: unset;
+  --nav-position-right: 0;
+  /* if you want to change sides just switch one property */
+  /* from properties to "unset" and the other to 0 */
+  /* title */
+  --nav-title-size: 0.8em;
+  --nav-title-color: #e5e5e5;
+  --nav-title-padding-x: 1rem;
+  --nav-title-padding-y: 0.25em;
+  /* nav button */
+  --nav-button-padding-x: 1rem;
+  --nav-button-padding-y: 0.375em;
+  --nav-button-border-radius: 0.375em;
+  --nav-button-font-size: 12px;
+  --nav-button-hover-text-color: #fff;
+  --nav-button-distance: 0.875em;
+  /* underline */
+  --underline-border-width: 0.0625em;
+  --underline-border-color: #ccc;
+  --underline-margin-y: 0.3125em;
+}
+
+/* popup settings 👆 */
+
+.popup {
+  display: inline-block;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}
+
+.popup input {
+  display: none;
+}
+
+.burger {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: var(--burger-bg);
+  width: var(--burger-diameter);
+  height: var(--burger-diameter);
+  border-radius: var(--burger-btn-border-radius);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--burger-transition);
+  outline: var(--burger-enable-outline-width) solid transparent;
+  outline-offset: 0;
+}
+
+.burger span {
+  height: var(--burger-line-height);
+  width: var(--burger-line-width);
+  background: #e5e5e5;
+  border-radius: var(--burger-line-border-radius);
+  position: absolute;
+  transition: var(--burger-line-transition);
+}
+
+.burger span:nth-child(1) {
+  top: var(--burger-offset);
+}
+
+.burger span:nth-child(2) {
+  bottom: var(--burger-offset);
+}
+
+.burger span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.popup-window {
+  transform: scale(var(--nav-default-scale));
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: var(--nav-padding-y) var(--nav-padding-x);
+  background: var(--nav-bg);
+  font-family: var(--nav-font-family);
+  color: var(--nav-text-color);
+  border-radius: var(--nav-border-radius);
+  box-shadow: var(--nav-shadow-width) var(--nav-shadow-color);
+  border: var(--nav-border-width) solid var(--nav-border-color);
+  top: calc(
+    var(--burger-diameter) + var(--burger-enable-outline-width) +
+      var(--burger-enable-outline-offset)
+  );
+  left: var(--nav-position-left);
+  right: var(--nav-position-right);
+  transition: var(--burger-transition);
+}
+
+.popup-window legend {
+  padding: var(--nav-title-padding-y) var(--nav-title-padding-x);
+  margin: 0;
+  color: var(--nav-title-color);
+  font-size: var(--nav-title-size);
+  text-transform: uppercase;
+}
+
+.popup-window ul {
+  margin: 0;
+  padding: 0.5em;
+  list-style-type: none;
+}
+
+.popup-window ul button {
+  outline: none;
+  width: 100%;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  color: #e5e5e5;
+  font-size: var(--nav-button-font-size);
+  padding: var(--nav-button-padding-y) var(--nav-button-padding-x);
+  white-space: nowrap;
+  border-radius: var(--nav-button-border-radius);
+  cursor: pointer;
+  column-gap: var(--nav-button-distance);
+}
+
+.popup-window ul li:nth-child(1) svg,
+.popup-window ul li:nth-child(2) svg {
+  color: cornflowerblue;
+}
+
+.popup-window ul li:nth-child(4) svg,
+.popup-window ul li:nth-child(5) svg {
+  color: rgb(153, 153, 153);
+}
+
+.popup-window ul li:nth-child(7) svg {
+  color: red;
+}
+
+.popup-window hr {
+  margin: var(--underline-margin-y) 0;
+  border: none;
+  border-bottom: var(--underline-border-width) solid
+    var(--underline-border-color);
+}
+
+/* actions */
+
+.popup-window ul button:hover,
+.popup-window ul button:focus-visible,
+.popup-window ul button:hover svg,
+.popup-window ul button:focus-visible svg {
+  color: var(--nav-button-hover-text-color);
+  background: var(--nav-button-hover-bg);
+}
+
+.burger:hover {
+  transform: scale(var(--burger-hover-scale));
+}
+
+.burger:active {
+  transform: scale(var(--burger-active-scale));
+}
+
+.burger:focus:not(:hover) {
+  outline-color: var(--burger-enable-outline-color);
+  outline-offset: var(--burger-enable-outline-offset);
+}
+
+.popup input:checked + .burger span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.popup input:checked + .burger span:nth-child(2) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.popup input:checked + .burger span:nth-child(3) {
+  transform: translateX(
+    calc(var(--burger-diameter) * -1 - var(--burger-line-width))
+  );
+}
+
+.popup input:checked ~ nav {
+  transform: scale(var(--nav-active-scale));
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+/*Deixando o icone e o botão lado a lado da second bar*/
+.login-button {
+  display: flex;
+  flex-direction: row;
+  gap: 0 0.7rem;
+}
+/*Estilizando o btn início*/
+.btn-mobile-menu {
+  border: none;
+  font-size: 0.875rem;
+  color: #e5e5e5;
+  font-weight: 400;
+  font-weight: bold;
+}
+/*hover diferente para o sair da netflix*/
+.popup-window ul .exit-popup button:hover,
+.popup-window ul .exit-popup button:focus-visible,
+.popup-window ul .exit-popup button:hover svg,
+.popup-window ul .exit-popup button:focus-visible svg {
+  color: var(--nav-button-hover-text-color);
+  background: #e50914;
+}
