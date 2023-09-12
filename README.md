@@ -1,2 +1,2 @@
-# Projeto-Senai
-Esse projeto foi criado para apresentar temas abordados no curso de Desenvolvimento de sistemas, para outros alunos da escola.
+# Meus Primeiros Projetos
+Esse projeto foi criado para apresentar os meus primeiros projetos com HTML, CSS, Javascript e Jquery.
